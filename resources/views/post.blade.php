@@ -51,7 +51,7 @@
 
       <hr>
 
-      @isset($comments)
+      {{-- @isset($comments)
         @foreach ($comments as $comment)
         <div class="card my-2">
           <div class="card-body d-flex justify-content-start">
@@ -87,7 +87,7 @@
             </div>
           </div>
         @endforeach
-      @endisset
+      @endisset --}}
       
       
     </div>
