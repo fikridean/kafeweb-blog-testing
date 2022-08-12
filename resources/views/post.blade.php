@@ -16,7 +16,7 @@
         created by <a href="/users/{{ $post->user->username }}">{{ $post->user->name }}</a> in <a href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a>
       </h6>
 
-      <p class="mt-4">{{ $post->body }}</p>
+      <p class="mt-4">{!! $post->body !!}</p>
     
     </div>
 
