@@ -61,7 +61,6 @@
               <img class="rounded-circle border border-1 p-1" src="" alt="Profile Photo" style="width: 40px; height:40px">
             </div>
             <div class="mx-2 d-flex flex-column align-items-start">
-              <small class="text-muted">{{ $comment->user->name }} • {{ $comment->updated_at->diffForHumans() }}</small>
               <p class="p-0 m-0 text-start">{{ $comment->body }}</p>
               @if ($comment->created_at != $comment->updated_at)
                 <small class="text-muted">Edited</small>  
