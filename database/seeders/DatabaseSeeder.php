@@ -25,14 +25,14 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        User::create([
-            'name' => 'fikri dean',
-            'username' => 'fikridean',
-            'email' => 'deanradityo@gmail.com',
-            'image' => 'user-profiles/profile.png',
-            'is_admin' => 1,
-            'password' => bcrypt('password')
-        ]);
+        // User::create([
+        //     'name' => 'fikri dean',
+        //     'username' => 'fikridean',
+        //     'email' => 'deanradityo@gmail.com',
+        //     'image' => 'user-profiles/profile.png',
+        //     'is_admin' => 1,
+        //     'password' => bcrypt('password')
+        // ]);
 
         // Comment::create([
         //     'post_id' => 1,

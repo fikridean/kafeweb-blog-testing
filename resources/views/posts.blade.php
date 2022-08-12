@@ -44,26 +44,29 @@
 
   <div class="row">
 
-    @foreach ($posts as $post)
-      <div class="col-lg-3 mt-4">
-        <x-cardPosts>
-          <x-slot name="title">{{ $post->title }}</x-slot>
-          <x-slot name="slug">{{ $post->slug }}</x-slot>
+    
+      @foreach ($posts as $post)
+        @isset($post)
+        <div class="col-lg-3 mt-4">
+          <x-cardPosts>
+            <x-slot name="title">{{ $post->title }}</x-slot>
+            <x-slot name="slug">{{ $post->slug }}</x-slot>
 
-          @if ($post->image)
-            <x-slot name="img">{{ asset('storage/' . $post->image) }}</x-slot>
-          @else
-            <x-slot name="img">https://source.unsplash.com/random/300x200/?{{ $post->category->name }}</x-slot>
-          @endif
+            @if ($post->image)
+              <x-slot name="img">{{ asset('storage/' . $post->image) }}</x-slot>
+            @else
+              <x-slot name="img">https://source.unsplash.com/random/300x200/?{{ $post->category->name }}</x-slot>
+            @endif
 
-          <x-slot name="author">{{ $post->user->username }}</x-slot>
-          <x-slot name="category">{{ $post->category->name }}</x-slot>
-          <x-slot name="categories">{{ $post->category->slug }}</x-slot>
-          <x-slot name="excerpt">{{ $post->excerpt }}</x-slot>
-        </x-cardPosts>
-      </div>
-      
-    @endforeach
+            <x-slot name="author">{{ $post->user->username }}</x-slot>
+            <x-slot name="category">{{ $post->category->name }}</x-slot>
+            <x-slot name="categories">{{ $post->category->slug }}</x-slot>
+            <x-slot name="excerpt">{{ $post->excerpt }}</x-slot>
+          </x-cardPosts>
+        </div>
+        @endisset
+      @endforeach
+    
   </div>
 
   <div class="row mt-4">
