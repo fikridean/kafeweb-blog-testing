@@ -56,7 +56,7 @@
       @isset($comments)
         @foreach ($comments as $comment)
 
-        {{ dd($comment) }}
+        {{ dd($comment->user) }}
         {{-- <div class="card my-2 bg-dark text-light">
           <div class="card-body d-flex justify-content-start">
             <div class="mx-2">
