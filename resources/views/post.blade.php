@@ -53,10 +53,9 @@
 
       <hr>
 
-      {{-- @isset($comments)
+      @isset($comments)
         @foreach ($comments as $comment)
-        <h1>{{ $comment }}</h1>
-        {{-- <div class="card my-2 bg-dark text-light">
+        <div class="card my-2 bg-dark text-light">
           <div class="card-body d-flex justify-content-start">
             <div class="mx-2">
               <img class="rounded-circle border border-1 p-1" src="" alt="Profile Photo" style="width: 40px; height:40px">
@@ -88,9 +87,9 @@
               
               </div>
             </div>
-          </div> --}}
-        {{-- @endforeach
-      @endisset --}}
+          </div>
+        @endforeach
+      @endisset
       
       
     </div>
