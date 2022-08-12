@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
 @section('container')
-  <h1 class="text-start mt-4">{{ $post->title }}</h1>
+  <h1 class="text-start mt-4 bg-dark text-light">{{ $post->title }}</h1>
 
   <div class="row mt-4">
-    <div class="col-lg-8 d-flex flex-column justify-content-start text-start p-2">
+    <div class="col-lg-8 d-flex flex-column justify-content-start text-start p-2 bg-dark text-light">
 
       @if ($post->image)
         <x-slot name="img">{{ asset('storage/' . $post->image) }}</x-slot>
@@ -22,7 +22,9 @@
 
     {{-- comments --}}
     <div class="col-lg-4 rounded d-flex flex-column flex-wrap justify-content-start p-4 border border-1">
-      <h5>Comments</h5>
+      <h5 class="bg-dark text-light">Comments</h5>
+
+      <hr class="text-light">
 
       <form action="/comment" method="POST" class="d-flex justify-content-center align-items-center my-3">
         @csrf
@@ -51,9 +53,9 @@
 
       <hr>
 
-      {{-- @isset($comments)
+      @isset($comments)
         @foreach ($comments as $comment)
-        <div class="card my-2">
+        <div class="card my-2 bg-dark text-light">
           <div class="card-body d-flex justify-content-start">
             <div class="mx-2">
               <img class="rounded-circle border border-1 p-1" src="" alt="Profile Photo" style="width: 40px; height:40px">
@@ -87,7 +89,7 @@
             </div>
           </div>
         @endforeach
-      @endisset --}}
+      @endisset
       
       
     </div>
