@@ -33,8 +33,8 @@
         <input type="hidden" name="post_slug" value="{{ $post->slug }}">
 
         <div class="form-floating mx-2 col-lg-8">
-          <input type="text" class="form-control w-100 h-100" id="body" name="body" placeholder="name@example.com">
-          <label for="body" class="d-flex">Add comment here</label>
+          <input type="text" class="form-control w-100 h-100 bg-dark text-light" id="body" name="body" placeholder="name@example.com">
+          <label for="body" class="d-flex bg-transparent text-light ">Add comment here</label>
         </div>
         
         @auth
