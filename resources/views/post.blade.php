@@ -53,7 +53,7 @@
 
       <hr>
 
-      @isset($comments)
+      {{-- @isset($comments)
         @foreach ($comments as $comment)
         <h1>{{ $comment }}</h1>
         {{-- <div class="card my-2 bg-dark text-light">
@@ -89,8 +89,8 @@
               </div>
             </div>
           </div> --}}
-        @endforeach
-      @endisset
+        {{-- @endforeach
+      @endisset --}}
       
       
     </div>
