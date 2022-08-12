@@ -31,7 +31,7 @@
     {{-- Author and Category --}}
     @isset($author)
       <p class="card-text fw-semibold">
-        <a href="/posts?author={{ $author }}" class="text-decoration-none blue-dark">@_{{ $author }}</a> in <a class="text-decoration-none" href="/posts?category={{ $categories }}">{{ $category }}</a>
+        <a href="/posts?author={{ $author }}" class="text-decoration-none">@_{{ $author }}</a> in <a class="text-decoration-none" href="/posts?category={{ $categories }}">{{ $category }}</a>
       </p>
     @endisset
 
