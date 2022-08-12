@@ -25,25 +25,25 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        User::create([
-            'name' => 'fikri dean',
-            'username' => 'fikridean',
-            'email' => 'deanradityo@gmail.com',
-            'image' => 'user-profiles/profile.png',
-            'password' => bcrypt('password')
-        ]);
+        // User::create([
+        //     'name' => 'fikri dean',
+        //     'username' => 'fikridean',
+        //     'email' => 'deanradityo@gmail.com',
+        //     'image' => 'user-profiles/profile.png',
+        //     'password' => bcrypt('password')
+        // ]);
 
-        Comment::create([
-            'post_id' => 1,
-            'user_id' => 1,
-            'body' => 'komentar pertama berhasil!'
-        ]);
+        // Comment::create([
+        //     'post_id' => 1,
+        //     'user_id' => 1,
+        //     'body' => 'komentar pertama berhasil!'
+        // ]);
 
-        Comment::create([
-            'post_id' => 1,
-            'user_id' => 2,
-            'body' => 'komentar kedua berhasil!'
-        ]);
+        // Comment::create([
+        //     'post_id' => 1,
+        //     'user_id' => 2,
+        //     'body' => 'komentar kedua berhasil!'
+        // ]);
 
         // User::create([
         //     'name' => 'Sitta Vidyadevi',
@@ -52,9 +52,9 @@ class DatabaseSeeder extends Seeder
         //     'password' => bcrypt('12345')
         // ]);
 
-        User::factory(5)->create();
+        // User::factory(5)->create();
 
-        Post::factory(20)->create();
+        // Post::factory(20)->create();
 
         Category::create([
             'name' => 'Web Programming',

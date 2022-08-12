@@ -55,7 +55,7 @@
         <div class="card my-2">
           <div class="card-body d-flex justify-content-start">
             <div class="mx-2">
-              <img class="rounded-circle border border-1 p-1" src="{{ asset('storage/' . $comment->user->image)}}" alt="Profile Photo" style="width: 40px; height:40px">
+              <img class="rounded-circle border border-1 p-1" src="" alt="Profile Photo" style="width: 40px; height:40px">
             </div>
             <div class="mx-2 d-flex flex-column align-items-start">
               <small class="text-muted">{{ $comment->user->name }} • {{ $comment->updated_at->diffForHumans() }}</small>
