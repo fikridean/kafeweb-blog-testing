@@ -55,7 +55,7 @@
 
       @isset($comments)
         @foreach ($comments as $comment)
-        <div class="card my-2 bg-dark text-light">
+        <div class="card my-2 bg-dark text-light border-light">
           <div class="card-body d-flex justify-content-start">
             <div class="mx-2">
               <img class="rounded-circle border border-1 border-light p-1" src="{{ asset('storage/' . $comment->user->image)}}" alt="Profile Photo" style="width: 20px; height:20px">
