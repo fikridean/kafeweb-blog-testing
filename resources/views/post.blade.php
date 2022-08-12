@@ -51,7 +51,8 @@
 
       <hr>
 
-      @foreach ($comments as $comment)
+      @isset($comments)
+        @foreach ($comments as $comment)
         <div class="card my-2">
           <div class="card-body d-flex justify-content-start">
             <div class="mx-2">
@@ -82,10 +83,12 @@
                 @endif
               @endauth
               
+              </div>
             </div>
           </div>
-        </div>
-      @endforeach
+        @endforeach
+      @endisset
+      
       
     </div>
 
