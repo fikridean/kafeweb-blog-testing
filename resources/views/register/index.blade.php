@@ -8,8 +8,8 @@
     <form method="POST" action="{{ route('register.registerSubmit') }}">
       @csrf
       <div class="form-floating my-3">
-        <input type="text" class="form-control rounded-3 @error('name') is-invalid @enderror" id="name" placeholder="name" name="name" required value="{{ old('name') }}">
-        <label for="name" class="d-flex">Name</label>
+        <input type="text" class="form-control bg-dark text-light rounded-3 @error('name') is-invalid @enderror" id="name" placeholder="name" name="name" required value="{{ old('name') }}">
+        <label for="name" class="d-flex bg-transparent text-light">Name</label>
       </div>
 
       @error('name')
@@ -19,8 +19,8 @@
       @enderror
 
       <div class="form-floating my-3">
-        <input type="text" class="form-control rounded-3 @error('username') is-invalid @enderror" id="username" placeholder="username" name="username" required value="{{ old('username') }}">
-        <label for="username" class="d-flex">Username</label>
+        <input type="text" class="form-control bg-dark text-light rounded-3 @error('username') is-invalid @enderror" id="username" placeholder="username" name="username" required value="{{ old('username') }}">
+        <label for="username" class="d-flex bg-transparent text-light">Username</label>
       </div>
 
       @error('username')
@@ -30,8 +30,8 @@
       @enderror
 
       <div class="form-floating my-3">
-        <input type="email" class="form-control rounded-3 @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" name="email" required value="{{ old('email') }}">
-        <label for="email" class="d-flex">Email address</label>
+        <input type="email" class="form-control bg-dark text-light rounded-3 @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" name="email" required value="{{ old('email') }}">
+        <label for="email" class="d-flex bg-transparent text-light">Email address</label>
       </div>
 
       @error('email')
@@ -41,8 +41,8 @@
       @enderror
   
       <div class="form-floating my-3">
-        <input type="password" class="form-control rounded-3 @error('password') is-invalid @enderror" id="password" placeholder="Password" name="password" required>
-        <label for="password" class="d-flex">Password</label>
+        <input type="password" class="form-control bg-dark text-light rounded-3 @error('password') is-invalid @enderror" id="password" placeholder="Password" name="password" required>
+        <label for="password" class="d-flex bg-transparent text-light">Password</label>
       </div>
 
       @error('password')
@@ -51,7 +51,7 @@
         </div>
       @enderror
 
-      <button class="btn btn-primary w-100" type="submit" formmethod="post">Sign up</button>
+      <button class="btn btn-secondary w-100" type="submit" formmethod="post">Sign up</button>
     
     </form>
 

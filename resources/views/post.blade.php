@@ -71,12 +71,6 @@
                   <div class="d-flex mt-2">
                     <form action="/comment/{{ $comment->id }}" method="POST">
                       @csrf
-                      @method('put')
-
-                      <button type="submit" class="btn btn-warning btn-sm px-4"><i class="bi bi-pencil-square"></i></button>
-                    </form>
-                    <form action="/comment/{{ $comment->id }}" method="POST">
-                      @csrf
                       @method('delete')
 
                       <button type="submit" class="btn btn-danger btn-sm px-4 ms-1"><i class="bi bi-x-circle-fill"></i></button>

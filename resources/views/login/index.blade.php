@@ -24,8 +24,8 @@
       @endif
 
       <div class="form-floating my-3">
-        <input type="email" class="form-control rounded-3 @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" name="email" required value="{{ old('email') }}">
-        <label for="email" class="d-flex">Email address</label>
+        <input type="email" class="form-control bg-dark text-light rounded-3 @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" name="email" required value="{{ old('email') }}">
+        <label for="email" class="d-flex bg-transparent text-light">Email address</label>
       </div>
 
       @error('email')
@@ -35,8 +35,8 @@
       @enderror
   
       <div class="form-floating my-3">
-        <input type="password" class="form-control rounded-3 @error('password') is-invalid @enderror" id="password" placeholder="Password" name="password" required>
-        <label for="password" class="d-flex">Password</label>
+        <input type="password" class="form-control bg-dark text-light rounded-3 @error('password') is-invalid @enderror" id="password" placeholder="Password" name="password" required>
+        <label for="password" class="d-flex bg-transparent text-light">Password</label>
       </div>
 
       @error('password')
@@ -45,7 +45,7 @@
         </div>
       @enderror
 
-      <button class="btn btn-primary w-100" type="submit" formmethod="post">Log in</button>
+      <button class="btn btn-secondary w-100" type="submit" formmethod="post">Log in</button>
     
     </form>
 
