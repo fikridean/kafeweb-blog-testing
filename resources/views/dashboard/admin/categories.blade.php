@@ -17,7 +17,7 @@
   <a href="/dashboard/categories/create" class="btn btn-primary mb-4">Create New Category</a>
 
   <div class="table-responsive col-lg-8">
-    <table class="table table-striped table-sm ">
+    <table class="table table-sm">
       <thead>
         <tr class="bg-dark text-light">
           <th scope="col">No</th>
