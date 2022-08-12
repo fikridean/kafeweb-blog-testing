@@ -54,6 +54,13 @@
           Manage Categories
         </a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link {{ Request::is('dashboard/users*') ? 'active text-light' : 'text-secondary' }}" aria-current="page" href="/dashboard/users">
+          <span data-feather="users" class="align-text-bottom"></span>
+          Manage Users
+        </a>
+      </li>
       @endcan
 
     </ul>

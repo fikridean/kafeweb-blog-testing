@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\AdminUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -53,5 +54,7 @@ Route::get('/dashboard/posts/slugify', [AdminCategoryController::class, 'slugify
 
 Route::resource('/dashboard/user', DashboardUserController::class)->middleware('auth');
 
-Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show');
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 Route::get('/dashboard/categories/slugify', [AdminCategoryController::class, 'slugify'])->middleware('admin');
+
+Route::resource('/dashboard/users', AdminUserController::class)->except('show')->middleware('admin');
