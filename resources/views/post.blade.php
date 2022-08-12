@@ -66,7 +66,7 @@
               @if ($comment->created_at != $comment->updated_at)
                 <small class="text-muted">Edited</small>  
               @endif
-              {{-- @auth
+              @auth
                 @if (auth()->user()->id === $comment->user->id)
                   <div class="d-flex mt-2">
                     <form action="/comment/{{ $comment->id }}" method="POST">
@@ -83,7 +83,7 @@
                     </form>
                   </div>
                 @endif
-              @endauth --}}
+              @endauth
               
               </div>
             </div>
