@@ -55,7 +55,7 @@
 
       @isset($comments)
         @foreach ($comments as $comment)
-        {{ $comment }}
+        <h1>{{ $comment }}</h1>
         {{-- <div class="card my-2 bg-dark text-light">
           <div class="card-body d-flex justify-content-start">
             <div class="mx-2">
