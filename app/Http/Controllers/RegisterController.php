@@ -28,6 +28,8 @@ class RegisterController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
+        $validatedData['image'] = 'user-profiles/profile.png';
+
         User::create($validatedData);
 
         return redirect('/login')->with('success', 'Registration successfull! Please login.');
