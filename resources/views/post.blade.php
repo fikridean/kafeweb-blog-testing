@@ -62,7 +62,7 @@
             </div>
             <div class="mx-2 d-flex flex-column align-items-start">
               <p class="p-0 m-0 text-start">{{ $comment->body }}</p>
-              <p class="p-0 m-0 text-start">{{ $comment->user }}</p>
+              <p class="p-0 m-0 text-start">{{ $comment->user->name }}</p>
               @if ($comment->created_at != $comment->updated_at)
                 <small class="text-muted">Edited</small>  
               @endif
