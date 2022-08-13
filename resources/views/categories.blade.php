@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-  <h1>{{ $title }}</h1>
+  <h1 class="text-dark">{{ $title }}</h1>
 
   <div class="row d-flex justify-content-center">
     @foreach ($categories as $category)

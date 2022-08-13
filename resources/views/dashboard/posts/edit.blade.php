@@ -2,16 +2,16 @@
 
 @section('container')
 <div class="pt-3 pb-2 mb-3">
-  <h1 class="h2">Edit Post</h1>
-  <hr />
+  <h1 class="h2 text-dark">Edit Post</h1>
+  <hr class="text-dark"/>
 
   <form action="/dashboard/posts/{{ $post->slug }}" method="POST" enctype="multipart/form-data">
     @method('put')
     @csrf
 
     <div class="mb-3">
-      <label for="title" class="form-label">Title</label>
-      <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required value="{{ old('title', $post->title) }}" autofocus>
+      <label for="title" class="form-label text-dark">Title</label>
+      <input type="text" class="form-control bg-light text-dark @error('title') is-invalid @enderror" id="title" name="title" required value="{{ old('title', $post->title) }}" autofocus>
     </div>
 
     @error('title')
@@ -21,8 +21,8 @@
     @enderror
 
     <div class="mb-3">
-      <label for="slug" class="form-label">Slug</label>
-      <input type="text" class="form-control @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug', $post->slug) }}">
+      <label for="slug" class="form-label text-dark">Slug</label>
+      <input type="text" class="form-control bg-light text-dark @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug', $post->slug) }}">
     </div>
 
     @error('slug')
@@ -32,7 +32,7 @@
     @enderror
 
     <div class="mb-3">
-      <label for="category" class="form-label">Category</label>
+      <label for="category" class="form-label text-dark">Category</label>
       <select class="form-select @error('category_id') is-invalid @enderror" name="category_id" required>
         <option selected>--Choose Category--</option>
         @foreach ($categories as $category)
@@ -53,8 +53,8 @@
     @enderror
 
     <div class="mb-3">
-      <label for="image" class="form-label">Post Cover</label>
-      <input class="form-control @error('category_id') is-invalid @enderror" type="file" id="image" name="image">
+      <label for="image" class="form-label text-dark">Post Cover</label>
+      <input class="form-control bg-light text-dark @error('category_id') is-invalid @enderror" type="file" id="image" name="image">
     </div>
 
     @error('image')
@@ -64,7 +64,7 @@
     @enderror
 
     <div class="mb-3">
-      <label for="body" class="form-label">Body</label>
+      <label for="body" class="form-label text-dark">Body</label>
 
       @error('body')
         <div class="alert alert-danger p-0">
@@ -73,7 +73,7 @@
       @enderror
 
       <input id="body" type="hidden" name="body" required value="{{ old('body', $post->body) }}">
-      <trix-editor input="body"></trix-editor>
+      <trix-editor class="text-dark" input="body"></trix-editor>
     </div>
 
     

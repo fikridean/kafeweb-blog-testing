@@ -36,16 +36,16 @@
 
       @auth
         <div class="dropdown d-flex justify-content-center">
-          <button class=" btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hello, {{ auth()->user()->name }}
           </button>
           <ul class="dropdown-menu bg-light">  
-            <li><a class="dropdown-item bg-light" href="/dashboard"><i class="bi bi-speedometer2"></i> My Dashboard</a></li>
-            <li><a class="dropdown-item bg-light" href="#"><i class="bi bi-sliders2"></i> Setting</a></li>
-            <li><hr class=""></li>
+            <li><a class="dropdown-item text-dark" href="/dashboard"><i class="bi bi-speedometer2"></i> My Dashboard</a></li>
+            <li><a class="dropdown-item text-dark" href="#"><i class="bi bi-sliders2"></i> Setting</a></li>
+            <li><hr class="text-dark"></li>
             <form action="{{ route('logout.logoutSubmit') }}" method="POST">
               @csrf
-              <li><button class="dropdown-item bg-light" href="/logout" formmethod="post">Log out <i class="bi bi-box-arrow-right"></i></button></li>
+              <li><button class="dropdown-item bg-light text-dark" href="/logout" formmethod="post">Log out <i class="bi bi-box-arrow-right"></i></button></li>
             </form>
           </ul>
         </div>

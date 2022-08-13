@@ -3,8 +3,8 @@
     <ul class="nav flex-column mt-2">
       
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/user') ? 'active text-light' : 'text-secondary' }}" aria-current="page" href="/dashboard/user">
-          <span data-feather="file-text" class="align-text-bottom"></span>
+        <a class="nav-link {{ Request::is('dashboard/user*') ? 'active text-light' : 'text-secondary' }}" aria-current="page" href="/dashboard/user">
+          <span data-feather="user" class="align-text-bottom"></span>
           My Profile
         </a>
       </li>
@@ -24,6 +24,14 @@
       </li>
 
       <hr>
+
+      <li class="nav-item mx-3">
+        <div class="form-check form-switch">
+          <input type="checkbox" class="form-check-input" id="darkSwitch" />
+          <label class="custom-control-label" for="darkSwitch"><i class="bi bi-circle-half"></i></label>
+        </div>
+
+      </li>
 
       <li class="nav-item">
         <a class="nav-link text-secondary" aria-current="page" href="/posts">

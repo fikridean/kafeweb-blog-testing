@@ -13,6 +13,7 @@
     {{-- Login --}}
     <link href="css/signin.css" rel="stylesheet">
 
+    {{-- dark mode --}}
     <link rel="stylesheet" href="{{ asset('css/dark-mode.css') }}">
 
     {{-- Owned Style --}}
@@ -32,13 +33,16 @@
 
     <div class="footer m-3"></div>
 
+    {{-- bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     
     {{-- jQuery --}}
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     
+    {{-- dark-mode --}}
     <script src="{{ asset('js/dark-mode-switch.min.js') }}"></script>
         
+    {{-- owned --}}
     <script src="{{ asset('js/script.js') }}"></script>
   </body>
 </html>

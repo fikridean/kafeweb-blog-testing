@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-xl-12">
 
-      <div class="card mt-4 border border-0">
+      <div class="card bg-light text-dark mt-4 border border-0">
         <div class="card-header fw-semibold border border-0">
           @<span></span>{{ $user->username }}
         </div>

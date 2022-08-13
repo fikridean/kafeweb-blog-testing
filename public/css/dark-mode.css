@@ -4,6 +4,7 @@
 
 [data-theme="dark"] .bg-light {
   background-color: #333 !important;
+  border-color: #333 !important;
 }
 
 [data-theme="dark"] .bg-white {
@@ -16,6 +17,12 @@
 
 [data-theme="dark"] .text-dark {
   color: rgb(200, 200, 200) !important;
+  border-color: rgb(200, 200, 200) !important;
+}
+
+[data-theme="dark"] .dropdown-item {
+  background-color: #333 !important;
+  border-color: #333 !important;
 }
 
 .active {

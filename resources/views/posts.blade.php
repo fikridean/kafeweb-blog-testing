@@ -13,7 +13,7 @@
     <div class="col-lg-3 mt-3">
       <div class="dropdown">
 
-        <a class="btn btn-secondary dropdown-toggle" href="/posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="btn btn-primary dropdown-toggle" href="/posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           
           @if(request('category'))
             {{ request('category') }}
@@ -23,9 +23,9 @@
 
         </a>
       
-        <ul class="dropdown-menu ">
+        <ul class="dropdown-menu bg-light">
           @foreach ($categories as $category)
-            <li><a class="dropdown-item {{ request('category') == $category->slug ? 'active' : '' }}" href="/posts?category={{ $category->slug }}">{{ $category->name }}</a></li>
+            <li><a class="dropdown-item text-dark {{ request('category') == $category->slug ? 'active' : '' }}" href="/posts?category={{ $category->slug }}">{{ $category->name }}</a></li>
           @endforeach
         </ul>
       </div>

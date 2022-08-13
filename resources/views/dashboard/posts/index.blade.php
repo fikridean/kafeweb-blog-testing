@@ -3,9 +3,9 @@
 
 @section('container')
 <div class=" pt-3 pb-2 mb-3">
-  <h1 class="h2">My Posts</h1>
+  <h1 class="h2 text-dark">My Posts</h1>
 
-  <hr />
+  <hr class="text-dark"/>
 
   @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show col-lg-8" role="alert">
@@ -19,7 +19,7 @@
   <div class="table-responsive col-lg-8">
     <table class="table table-sm">
       <thead>
-        <tr class=" text-light">
+        <tr class="bg-light text-dark">
           <th scope="col">No</th>
           <th scope="col">Title</th>
           <th scope="col">Category</th>
@@ -29,7 +29,7 @@
       </thead>
       <tbody>
         @foreach ($posts as $post)
-          <tr class=" text-light">
+          <tr class="bg-light text-dark">
             <td>{{ $loop->iteration }}</td>
             <td>{{ $post->title }}</td>
             <td>{{ $post->category->name }}</td>

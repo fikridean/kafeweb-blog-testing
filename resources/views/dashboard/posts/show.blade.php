@@ -13,21 +13,21 @@
     </form>
   </div>
 
-  <h1 class="text-start mt-4">{{ $post->title }}</h1>
+  <h1 class="text-start mt-4 text-dark">{{ $post->title }}</h1>
 
   <div class="row mt-4">
     <div class="col-lg-12 d-flex flex-column justify-content-start text-start">
       @if ($post->image)
-        <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid rounded w-25" alt="...">
+        <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid text-dark rounded w-25" alt="Post Image">
       @else
-        <img src="https://source.unsplash.com/random/300x200/?person" class="img-fluid rounded w-25" alt="..."> 
+        <img src="https://source.unsplash.com/random/300x200/?person" class="img-fluid rounded w-25" alt="Post Image"> 
       @endif
     
-      <h6 class="mt-2">
+      <h6 class="mt-2 text-dark">
         created by <a href="/users/{{ $post->user->username }}">{{ $post->user->name }}</a> in <a href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a>
       </h6>
 
-      <p class="mt-4">{!! $post->body !!}</p>
+      <div class="mt-4 text-dark">{!! $post->body !!}</div>
     
     </div>
 

@@ -8,7 +8,7 @@
     <form action="{{ route('logout.logoutSubmit') }}" method="POST">
       @csrf
 
-      <button class="dropdown-item text-light px-3" href="/logout" formmethod="post"><span data-feather="log-out" class="align-text-bottom"></span> Log out</button>
+      <button class="dropdown-item bg-light text-dark px-3" href="/logout" formmethod="post"><span data-feather="log-out" class="align-text-bottom"></span> Log out</button>
     </form>
   </div>
 </header>
