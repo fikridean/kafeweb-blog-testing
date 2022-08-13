@@ -1,4 +1,4 @@
-<div class="card bg-dark shadow" 
+<div class="card shadow" 
 
 @if (@isset($img))
   style="height: 550px"
@@ -11,12 +11,12 @@
     <img src="{{ $img }}" class="card-img-top w-100" alt="{{ $category }}" style="height: 200px">
   @endisset @endisset
   
-  <div class="card-body bg-dark text-light">
+  <div class="card-body">
     
     {{-- Post Title --}}
     @isset($title)
       <h5>
-        <a class="text-light text-decoration-none" @isset($slug) href="/posts/{{ $slug }}" @endisset>
+        <a class=" text-decoration-none" @isset($slug) href="/posts/{{ $slug }}" @endisset>
           @if (strlen($title) > 30)
             @php
                 echo mb_strimwidth($title, 0, 30, "...");
@@ -35,8 +35,8 @@
       </p>
     @endisset
 
-    <div class="text-secondary">
-      <hr class="text-light">
+    <div>
+      <hr>
     </div>
 
     {{-- Excerpt --}}

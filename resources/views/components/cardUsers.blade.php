@@ -1,4 +1,4 @@
-<div class="card shadow-sm bg-dark text-light" style="min-height: 350px">
+<div class="card shadow-sm" style="min-height: 350px">
 
   <div class="card-header">
     @isset($username)

@@ -10,7 +10,7 @@
 
     <div class="mb-3">
       <label for="title" class="form-label">Title</label>
-      <input type="text" class="form-control bg-dark text-light @error('title') is-invalid @enderror" id="title" name="title" required value="{{ old('title') }}" autofocus>
+      <input type="text" class="form-control text-light @error('title') is-invalid @enderror" id="title" name="title" required value="{{ old('title') }}" autofocus>
     </div>
 
     @error('title')
@@ -21,7 +21,7 @@
 
     <div class="mb-3">
       <label for="slug" class="form-label">Slug</label>
-      <input type="text" class="form-control bg-dark text-light @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug') }}">
+      <input type="text" class="form-control text-light @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug') }}">
     </div>
 
     @error('slug')
@@ -32,7 +32,7 @@
 
     <div class="mb-3">
       <label for="category" class="form-label">Category</label>
-      <select class="form-select bg-dark text-light @error('category_id') is-invalid @enderror" name="category_id" required>
+      <select class="form-select text-light @error('category_id') is-invalid @enderror" name="category_id" required>
         <option selected>--Choose Category--</option>
         @foreach ($categories as $category)
           @if (old('category_id') == $category->id)
@@ -53,7 +53,7 @@
 
     <div class="mb-3">
       <label for="image" class="form-label">Post Cover</label>
-      <input class="form-control btn-secondary bg-dark text-light @error('category_id') is-invalid @enderror" type="file" id="image" name="image">
+      <input class="form-control btn-secondary text-light @error('category_id') is-invalid @enderror" type="file" id="image" name="image">
     </div>
 
     @error('image')
@@ -71,7 +71,7 @@
         </div>
       @enderror
 
-      <input id="body" type="hidden" name="body" required value="{{ old('body') }}" class="bg-dark text-light">
+      <input id="body" type="hidden" name="body" required value="{{ old('body') }}" class= text-light">
       <trix-editor input="body"></trix-editor>
     </div>
 

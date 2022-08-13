@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
 @section('container')
-  <h1 class="text-start mt-4 bg-dark text-light">{{ $post->title }}</h1>
+  <h1 class="text-start mt-4">{{ $post->title }}</h1>
 
   <div class="row mt-4">
-    <div class="col-lg-8 d-flex flex-column justify-content-start text-start p-2 bg-dark text-light">
+    <div class="col-lg-8 d-flex flex-column justify-content-start text-start p-2">
 
       @if ($post->image)
         <x-slot name="img">{{ asset('storage/' . $post->image) }}</x-slot>
@@ -22,9 +22,9 @@
 
     {{-- comments --}}
     <div class="col-lg-4 rounded d-flex flex-column flex-wrap justify-content-start p-4 border border-1">
-      <h5 class="bg-dark text-light">Comments</h5>
+      <h5>Comments</h5>
 
-      <hr class="text-light">
+      <hr>
 
       <form action="/comment" method="POST" class="d-flex justify-content-center align-items-center my-3">
         @csrf
@@ -33,8 +33,8 @@
         <input type="hidden" name="post_slug" value="{{ $post->slug }}">
 
         <div class="form-floating mx-2 col-lg-8">
-          <input type="text" class="form-control w-100 h-100 bg-dark text-light" id="body" name="body" placeholder="name@example.com">
-          <label for="body" class="d-flex bg-transparent text-light ">Add comment here</label>
+          <input type="text" class="form-control w-100 h-100 " id="body" name="body" placeholder="name@example.com">
+          <label for="body" class="d-flex bg-transparent ">Add comment here</label>
         </div>
         
         @auth
@@ -55,7 +55,7 @@
 
       @isset($comments)
         @foreach ($comments as $comment)
-        <div class="card my-2 bg-dark text-light border-light">
+        <div class="card my-2  border-light">
           <div class="card-body d-flex justify-content-start">
             <div class="mx-2">
               <img class="rounded-circle border border-1 border-light p-1" src="{{ asset('storage/' . $comment->user->image)}}" alt="Profile Photo" style="width: 20px; height:20px">

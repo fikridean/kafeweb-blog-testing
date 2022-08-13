@@ -10,7 +10,7 @@
 
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control bg-dark text-light @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}" autofocus>
+      <input type="text" class="form-control text-light @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}" autofocus>
     </div>
 
     @error('name')
@@ -21,7 +21,7 @@
 
     <div class="mb-3">
       <label for="slug" class="form-label">Slug</label>
-      <input type="text" class="form-control bg-dark text-light @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug') }}">
+      <input type="text" class="form-control text-light @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug') }}">
     </div>
 
     @error('slug')

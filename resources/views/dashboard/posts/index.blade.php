@@ -19,7 +19,7 @@
   <div class="table-responsive col-lg-8">
     <table class="table table-sm">
       <thead>
-        <tr class="bg-dark text-light">
+        <tr class=" text-light">
           <th scope="col">No</th>
           <th scope="col">Title</th>
           <th scope="col">Category</th>
@@ -29,7 +29,7 @@
       </thead>
       <tbody>
         @foreach ($posts as $post)
-          <tr class="bg-dark text-light">
+          <tr class=" text-light">
             <td>{{ $loop->iteration }}</td>
             <td>{{ $post->title }}</td>
             <td>{{ $post->category->name }}</td>

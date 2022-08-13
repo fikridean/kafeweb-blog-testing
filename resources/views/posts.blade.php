@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-  <h1>
+  <h1 class="text-dark">
     @if(request('category'))
       {{ $title }} in {{ request('category') }}
     @else
@@ -13,7 +13,7 @@
     <div class="col-lg-3 mt-3">
       <div class="dropdown">
 
-        <a class="btn btn-secondary dropdown-toggle bg-dark text-light" href="/posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="btn btn-secondary dropdown-toggle" href="/posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           
           @if(request('category'))
             {{ request('category') }}
@@ -23,9 +23,9 @@
 
         </a>
       
-        <ul class="dropdown-menu bg-dark">
+        <ul class="dropdown-menu ">
           @foreach ($categories as $category)
-            <li><a class="dropdown-item text-light {{ request('category') == $category->slug ? 'active' : '' }}" href="/posts?category={{ $category->slug }}">{{ $category->name }}</a></li>
+            <li><a class="dropdown-item {{ request('category') == $category->slug ? 'active' : '' }}" href="/posts?category={{ $category->slug }}">{{ $category->name }}</a></li>
           @endforeach
         </ul>
       </div>

@@ -22,7 +22,7 @@
   </style>
 
 </head>
-<body class="bg-dark text-light">
+<body class="text-light">
 
   @include('dashboard.layouts.header')
 

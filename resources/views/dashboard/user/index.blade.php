@@ -21,14 +21,14 @@
         <a href="/dashboard/user/{{ $user->username }}/edit" class="btn btn-warning btn-sm mt-4"><span data-feather="edit" class="align-text-bottom"></span> Change Profile</a>
       </div>
 
-      <div class="card bg-dark border border-0 d-flex justify-content-start mx-5 mt-4">
-        <div class="card-header fw-semibold bg-dark border border-0 fs-5 text-primary text-center">
+      <div class="card border border-0 d-flex justify-content-start mx-5 mt-4">
+        <div class="card-header fw-semibold border border-0 fs-5 text-primary text-center">
           @<span></span>{{ $user->username }}
         </div>
 
         <hr class="text-light">
 
-        <div class="card-body bg-dark border border-0 text-center">
+        <div class="card-body border border-0 text-center">
           <h5 class="card-title text-capitalize fs-2">{{ $user->name }}</h5>
           <p class="card-text mt-3 fs-6"><i class="bi bi-envelope-check-fill"></i> {{ $user->email }}</p>
           <p class="card-text fs-6">joined since {{ $user->created_at->diffForHumans() }}</p>

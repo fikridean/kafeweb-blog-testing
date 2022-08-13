@@ -1,0 +1,55 @@
+[data-theme="dark"] {
+  background-color: #111 !important;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #eee !important;
+}
+
+[data-theme="dark"] .text-dark {
+  color: rgb(200, 200, 200) !important;
+}
+
+.active {
+  border-bottom: 2px solid #4b5156 !important;
+}
+
+[data-theme="dark"] .active {
+  color: rgb(230, 230, 230) !important;
+  border-bottom: 2px solid rgb(230, 230, 230) !important;
+}
+
+[data-theme="dark"] .active.dropdown-item {
+  background-color: #4b5156 !important;
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: #6c757d !important;
+  border-color: #6c757d;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background-color: #4b5156 !important;
+  border-color: #4b5156;
+}
+
+[data-theme="dark"] .btn-outline-primary {
+  background-color: transparent !important;
+  border-color: #6c757d !important;
+  color: #6c757d !important;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  color: #fff !important;
+}
+

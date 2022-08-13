@@ -17,7 +17,7 @@
   <div class="table-responsive col-lg-8">
     <table class="table table-sm">
       <thead>
-        <tr class="bg-dark text-light">
+        <tr class=" text-light">
           <th scope="col">No</th>
           <th scope="col">User</th>
           <th scope="col">Number of Posts</th>
@@ -27,7 +27,7 @@
       </thead>
       <tbody>
         @foreach ($users as $user)
-          <tr class="bg-dark text-light">
+          <tr class=" text-light">
             <td>{{ $loop->iteration }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->posts->count() }}</td>
