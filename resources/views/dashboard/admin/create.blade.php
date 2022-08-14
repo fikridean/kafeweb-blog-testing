@@ -2,15 +2,15 @@
 
 @section('container')
 <div class="pt-3 pb-2 mb-3">
-  <h1 class="h2">Create Category</h1>
-  <hr />
+  <h1 class="h2 text-dark">Create Category</h1>
+  <hr class="text-dark"/>
 
   <form action="/dashboard/categories" method="POST">
     @csrf
 
     <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control text-light @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}" autofocus>
+      <label for="name" class="form-label text-dark">Name</label>
+      <input type="text" class="form-control bg-light text-dark @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}" autofocus>
     </div>
 
     @error('name')
@@ -20,8 +20,8 @@
     @enderror
 
     <div class="mb-3">
-      <label for="slug" class="form-label">Slug</label>
-      <input type="text" class="form-control text-light @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug') }}">
+      <label for="slug" class="form-label text-dark">Slug</label>
+      <input type="text" class="form-control bg-light text-dark @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug') }}">
     </div>
 
     @error('slug')
