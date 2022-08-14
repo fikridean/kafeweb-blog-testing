@@ -60,7 +60,6 @@
   color: #fff !important;
 }
 
-
 [data-theme="dark"] .navbar-toggler {
   border-color: rgb(230, 230, 230) !important;
 }
@@ -70,3 +69,18 @@
   font-size: 24px; 
 }
 
+[data-theme="dark"] .table-light th {
+  background-color: rgb(10, 10, 10) !important;
+}
+
+[data-theme="dark"] .table-light td {
+  background-color: rgb(10, 10, 10) !important;
+}
+
+[data-theme="dark"] .table-light tr:hover {
+  color: rgb(230, 230, 230) !important;
+}
+
+.table-light tr:hover {
+ color: #000 !important;
+}

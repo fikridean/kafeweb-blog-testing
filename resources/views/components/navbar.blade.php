@@ -36,7 +36,7 @@
 
       @auth
         <div class="dropdown d-flex justify-content-star p-2">
-          <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-outline-secondary btn-sm dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hello, {{ auth()->user()->name }}
           </button>
           <ul class="dropdown-menu bg-light">  

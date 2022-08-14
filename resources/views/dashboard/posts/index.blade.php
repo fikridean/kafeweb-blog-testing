@@ -17,7 +17,7 @@
   <a href="/dashboard/posts/create" class="btn btn-primary mb-4">Create Post</a>
 
   <div class="table-responsive col-lg-8">
-    <table class="table table-sm">
+    <table class="table table-sm table-light">
       <thead>
         <tr class="bg-light text-dark">
           <th scope="col">No</th>

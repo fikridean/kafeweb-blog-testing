@@ -23,7 +23,7 @@
         </a>
       </li>
 
-      <hr>
+      <hr class="text-primary">
 
       <li class="nav-item mx-3">
         <div class="form-check form-switch">
@@ -40,8 +40,20 @@
         </a>
       </li>
 
+      <li class="nav-item">
+        <form action="{{ route('logout.logoutSubmit') }}" method="POST">
+          @csrf
+    
+          <button type="submit" class="nav-link text-secondary bg-transparent border-0">
+            <span data-feather="log-out" class="align-text-bottom">
+            </span> Log out
+          </button>
+        </form>
+      </li>
+
       @can('admin')
-      <hr>
+
+      <hr class="text-danger">
       
       <li class="nav-item">
         <a class="nav-link text-danger" aria-current="page">

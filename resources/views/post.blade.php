@@ -1,30 +1,30 @@
 @extends('layouts.main')
 
 @section('container')
-  <h1 class="text-start mt-4">{{ $post->title }}</h1>
+  <h1 class="text-start mt-4 text-dark">{{ $post->title }}</h1>
 
   <div class="row mt-4">
     <div class="col-lg-8 d-flex flex-column justify-content-start text-start p-2">
 
       @if ($post->image)
-        <x-slot name="img">{{ asset('storage/' . $post->image) }}</x-slot>
+        <img class="w-50" src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}">
       @else
-        <x-slot name="img">https://source.unsplash.com/random/300x200/?{{ $post->category->name }}</x-slot>
+        <img class="w-50" src="https://source.unsplash.com/random/300x200/?{{ $post->category->name }}" alt="{{ $post->title }}">
       @endif
       
-      <h6 class="mt-2">
+      <h6 class="mt-2 text-dark">
         created by <a href="/users/{{ $post->user->username }}">{{ $post->user->name }}</a> in <a href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a>
       </h6>
 
-      <p class="mt-4">{!! $post->body !!}</p>
+      <div class="mt-4 text-dark">{!! $post->body !!}</div>
     
     </div>
 
     {{-- comments --}}
     <div class="col-lg-4 rounded d-flex flex-column flex-wrap justify-content-start p-4 border border-1">
-      <h5>Comments</h5>
+      <h5 class="text-dark">Comments</h5>
 
-      <hr>
+      <hr class="text-dark">
 
       <form action="/comment" method="POST" class="d-flex justify-content-center align-items-center my-3">
         @csrf
@@ -33,8 +33,8 @@
         <input type="hidden" name="post_slug" value="{{ $post->slug }}">
 
         <div class="form-floating mx-2 col-lg-8">
-          <input type="text" class="form-control w-100 h-100 " id="body" name="body" placeholder="name@example.com">
-          <label for="body" class="d-flex bg-transparent ">Add comment here</label>
+          <input type="text" class="form-control bg-light text-dark" id="body" name="body" placeholder="name@example.com">
+          <label for="body" class="d-flex bg-transparent text-dark border-0">Add comment here</label>
         </div>
         
         @auth
@@ -55,10 +55,10 @@
 
       @isset($comments)
         @foreach ($comments as $comment)
-        <div class="card my-2  border-light">
+        <div class="card my-2 border-light bg-light text-dark">
           <div class="card-body d-flex justify-content-start">
-            <div class="mx-2">
-              <img class="rounded-circle border border-1 border-light p-1" src="{{ asset('storage/' . $comment->user->image)}}" alt="Profile Photo" style="width: 20px; height:20px">
+            <div class="">
+              <img class="rounded-circle" src="{{ asset('storage/' . $comment->user->image)}}" alt="Profile Photo" style="width: 40px; height:40px">
             </div>
             <div class="mx-2 d-flex flex-column align-items-start">
               <small class="text-muted text-start">{{ $comment->user->name }} • {{ $comment->updated_at->diffForHumans() }}</small>
