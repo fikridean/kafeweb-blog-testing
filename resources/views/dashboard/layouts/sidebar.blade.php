@@ -3,7 +3,7 @@
     <ul class="nav flex-column mt-2">
       
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/user*') ? 'active text-light' : 'text-secondary' }}" aria-current="page" href="/dashboard/user">
+        <a class="nav-link {{ Request::is('dashboard/user') || Request::is('dashboard/user/*') ? 'active text-light' : 'text-secondary' }}" aria-current="page" href="/dashboard/user">
           <span data-feather="user" class="align-text-bottom"></span>
           My Profile
         </a>

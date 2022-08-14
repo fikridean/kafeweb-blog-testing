@@ -20,14 +20,6 @@ body a:hover {
   color: #0074d9;
 }
 
-body .blue-dark {
-  color: #1C3879 !important;
-}
-
-body .navbar {
-  background-color: #191C1F;
-}
-
 body .text-justify {
   text-align: justify;
 }

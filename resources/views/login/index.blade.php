@@ -25,7 +25,7 @@
 
       <div class="form-floating my-3">
         <input type="email" class="form-control bg-light text-dark rounded-3 @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" name="email" required value="{{ old('email') }}" autocomplete="off">
-        <label for="email" class="d-flex bg-transparent text-dark">Email address</label>
+        <label for="email" class="d-flex bg-transparent text-dark border border-0">Email address</label>
       </div>
 
       @error('email')
@@ -36,7 +36,7 @@
   
       <div class="form-floating my-3">
         <input type="password" class="form-control bg-light text-dark rounded-3 @error('password') is-invalid @enderror" id="password" placeholder="Password" name="password" required autocomplete="off">
-        <label for="password" class="d-flex bg-transparent text-dark">Password</label>
+        <label for="password" class="d-flex bg-transparent text-dark border border-0">Password</label>
       </div>
 
       @error('password')
