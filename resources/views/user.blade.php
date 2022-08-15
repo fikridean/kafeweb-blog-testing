@@ -2,7 +2,7 @@
 
 @section('container')
 
-  <img src="{{ asset('storage/' . $user->image) }}" alt="{{ $user->name }}" class="rounded-circle shadow-lg" style="width: 200px; height: 200px">
+  <img src="{{ asset($user->image) }}" alt="{{ $user->name }}" class="rounded-circle shadow-lg" style="width: 200px; height: 200px">
 
   <div class="row">
     <div class="col-xl-12">

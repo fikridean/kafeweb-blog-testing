@@ -51,7 +51,11 @@ class DashboardPostController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-covers');
+            $validatedData['image'] = $request->file('image')->store('public_posts');
+            $image = $request->file('image');
+            $input['imageName'] = $validatedData['image'];
+            $destinationPath = public_path('/public_posts');
+            $image->move($destinationPath, $input['imageName']);
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -116,7 +120,13 @@ class DashboardPostController extends Controller
         $validatedData = $request->validate($rules);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-covers');
+            if ($request->file('image')) {
+                $validatedData['image'] = $request->file('image')->store('public_posts');
+                $image = $request->file('image');
+                $input['imageName'] = $validatedData['image'];
+                $destinationPath = public_path('/public_posts');
+                $image->move($destinationPath, $input['imageName']);
+            }
         } else {
             $validatedData['image'] = $post->image;
         }

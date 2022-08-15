@@ -47,7 +47,7 @@
       <div class="alert alert-warning" role="alert">
         Recommended <strong>Square</strong> Shape
       </div>
-      <img src="{{ asset('storage/' . $user->image) }}" alt="Profile Photo" class="p-3 text-dark" style="width: 100px;">
+      <img src="{{ asset($user->image) }}" alt="Profile Photo" class="p-3 text-dark w-25">
       <input class="form-control bg-light text-dark @error('category_id') is-invalid @enderror" type="file" id="image" name="image">
     </div>
 

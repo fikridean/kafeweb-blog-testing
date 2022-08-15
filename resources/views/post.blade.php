@@ -7,9 +7,9 @@
     <div class="col-lg-8 d-flex flex-column justify-content-start text-start p-2">
 
       @if ($post->image)
-        <img class="w-50" src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}">
+        <img class="w-25" src="{{ asset($post->image) }}" alt="{{ $post->title }}">
       @else
-        <img class="w-50" src="https://source.unsplash.com/random/300x200/?{{ $post->category->name }}" alt="{{ $post->title }}">
+        <img class="w-25" src="https://source.unsplash.com/random/300x200/?{{ $post->category->name }}" alt="{{ $post->title }}">
       @endif
       
       <h6 class="mt-2 text-dark">

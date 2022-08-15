@@ -28,7 +28,7 @@ class RegisterController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        $validatedData['image'] = 'user-profiles/profile.png';
+        $validatedData['image'] = 'img/profile.png';
 
         User::create($validatedData);
 

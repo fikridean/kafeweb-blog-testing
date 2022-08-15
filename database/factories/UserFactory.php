@@ -22,7 +22,7 @@ class UserFactory extends Factory
             'username' => fake()->username(),
             'email' => fake()->safeEmail(),
             'password' => bcrypt('password'), // password
-            'image' => 'user-profiles/profile.png',
+            'image' => 'public_profiles/profile.png',
             'remember_token' => Str::random(10),
         ];
     }

@@ -91,7 +91,11 @@ class DashboardUserController extends Controller
         $validatedData['password'] = $user->password;
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('user-profiles');
+            $validatedData['image'] = $request->file('image')->store('public_profiles');
+            $image = $request->file('image');
+            $input['imageName'] = $validatedData['image'];
+            $destinationPath = public_path('/public_profiles');
+            $image->move($destinationPath, $input['imageName']);
         } else {
             $validatedData['image'] = $user->image;
         }

@@ -17,7 +17,7 @@
   <div class="row">
     <div class="col-xl-12 d-flex flex-wrap justify-content-center align-items-center">
       <div class="d-flex flex-column justify-content-center align-items-center mx-5 mt-4">
-        <img src="/storage/{{ $user->image }}" alt="{{ $user->name }}" class="rounded-circle shadow-lg" style="width: 200px; height: 200px">
+        <img src="{{ asset($user->image) }}" alt="{{ $user->name }}" class="rounded-circle shadow-lg" style="width: 200px; height: 200px">
         <a href="/dashboard/user/{{ $user->username }}/edit" class="btn btn-warning btn-sm mt-4"><span data-feather="edit" class="align-text-bottom"></span> Edit Profile</a>
       </div>
 

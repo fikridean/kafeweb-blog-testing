@@ -39,9 +39,8 @@
           <button class="btn btn-outline-secondary btn-sm dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hello, {{ auth()->user()->name }}
           </button>
-          <ul class="dropdown-menu bg-light">  
+          <ul class="dropdown-menu bg-light">     
             <li><a class="dropdown-item text-dark" href="/dashboard"><i class="bi bi-speedometer2"></i> My Dashboard</a></li>
-            <li><a class="dropdown-item text-dark" href="#"><i class="bi bi-sliders2"></i> Setting</a></li>
             <li><hr class="text-dark"></li>
             <form action="{{ route('logout.logoutSubmit') }}" method="POST">
               @csrf

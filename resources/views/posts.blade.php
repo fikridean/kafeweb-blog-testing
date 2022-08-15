@@ -53,7 +53,7 @@
             <x-slot name="slug">{{ $post->slug }}</x-slot>
 
             @if ($post->image)
-              <x-slot name="img">{{ asset('storage/' . $post->image) }}</x-slot>
+              <x-slot name="img">{{ asset($post->image) }}</x-slot>
             @else
               <x-slot name="img">https://source.unsplash.com/random/300x200/?{{ $post->category->name }}</x-slot>
             @endif

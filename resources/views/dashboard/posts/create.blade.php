@@ -88,7 +88,7 @@
   title.addEventListener('keyup', function() {
     fetch('/dashboard/posts/slugify?title=' + title.value)
       .then(response => response.json())
-      .then(response => slug.value = response['slug'])
+      .then(response => alert(response))
   })
 
   document.addEventListener("trix-file-accept", function(event) {

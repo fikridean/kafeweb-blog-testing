@@ -18,7 +18,7 @@
   <div class="row mt-4">
     <div class="col-lg-12 d-flex flex-column justify-content-start text-start">
       @if ($post->image)
-        <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid text-dark rounded w-25" alt="Post Image">
+        <img src="{{ asset($post->image) }}" class="img-fluid text-dark rounded w-25" alt="Post Image">
       @else
         <img src="https://source.unsplash.com/random/300x200/?person" class="img-fluid rounded w-25" alt="Post Image"> 
       @endif
