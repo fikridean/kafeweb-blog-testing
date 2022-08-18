@@ -11,8 +11,6 @@ class Post extends Model
 
     protected $guarded = ['id'];
 
-    protected $with = ['category'];
-
     public function slugify($text, string $divider = '-')
     {
         // replace non letter or digits by divider

@@ -78,7 +78,7 @@
 
     
 
-    <button type="submit" class="btn btn-primary w-100">Create a Post</button>
+    <button type="submit" class="btn btn-primary w-100">Edit Post</button>
   </form>
 </div>
 
